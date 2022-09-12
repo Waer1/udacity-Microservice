@@ -1,5 +1,5 @@
 # Use NodeJS base image
-FROM node:13
+FROM node:latest
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm i
 
 # Copy app source
 COPY . .
